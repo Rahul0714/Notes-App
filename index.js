@@ -4,6 +4,7 @@ const notesRouter = require("./routes/Note");
 const App = express();
 
 App.use(express.json());
+App.use(express.urlencoded());
 mongoose
   .connect(
     "mongodb+srv://rahulmujumdar2000:Rahul007@cluster0.f7wc8qe.mongodb.net/Notesdb"
