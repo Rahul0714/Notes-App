@@ -12,7 +12,7 @@ router.post("/list", async (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
-  await Note.deleteOne({ userId: req.body.userId });
+  await Note.deleteOne({ id: req.body.id });
   try {
     const newNote = new Note(req.body);
     newNote.save();
