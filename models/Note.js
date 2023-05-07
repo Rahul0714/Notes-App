@@ -9,6 +9,7 @@ const noteSchema = mongoose.Schema({
   userId: {
     type: String,
     required: true,
+    unique: false,
   },
   title: {
     type: String,
