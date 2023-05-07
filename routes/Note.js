@@ -12,7 +12,9 @@ router.post("/list", async (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
-  await Note.deleteOne({ id: req.body.id });
+  console.log("tis is adding");
+  var res = await Note.deleteOne({ id: req.body.id });
+  console.log(res); //;();
   try {
     const newNote = new Note(req.body);
     newNote.save();
